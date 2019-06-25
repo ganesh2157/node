@@ -5,19 +5,19 @@ var app = express();
 //Reusable controllers
 var customerController=function (req, res) {
   console.log("CAlling rest api");
-  var customers=[
+  var abc=[
             {firstName:'Ravi',lastName:'Tambade',age:43},
             {firstName:'Prashant',lastName:'Karhale',age:43},
             {firstName:'Rohit',lastName:'Puranik',age:28},
             {firstName:'Shiv',lastName:'Kumar',age:25},
             {firstName:'Manoj',lastName:'Pande',age:23}
       ];
-  res.send(customers);
+  res.send(abc);
 };
 
 // setting router to map requests  with controllers
 
-app.get('/customers',customerController );
+app.get('/abc',customerController );
 
 var server = app.listen(8088, function () {
   var host = server.address().address
